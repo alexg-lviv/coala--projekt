@@ -1,0 +1,478 @@
+<!DOCTYPE HTML>
+<!--
+	Escape Velocity by HTML5 UP
+	html5up.net | @ajlkn
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html>
+	<head>
+		<title>Coala project</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<!--[if lte IE 8]><script src="assets/js/ie/html5shiv.js"></script><![endif]-->
+		<link rel="stylesheet" href="assets/css/main.css" />
+		<link rel="stylesheet" type="text/css" href="normalize.css" />
+		<link rel="stylesheet" type="text/css" href="set2.css" />
+		<!--[if lte IE 8]><link rel="stylesheet" href="assets/css/ie8.css" /><![endif]-->
+	</head>
+	<body class="no-sidebar">
+		<div id="page-wrapper">
+			
+			<!-- Header -->
+				<div id="header-wrapper" class="wrapper">
+					<div id="header-wrapper" class="wrapper">
+					<div id="header">
+
+						<!-- Logo -->
+							<div id="logo">
+							<img src="images/logo.png" width="10%" height="100%">
+								<h1><a href="index.html">Coala project </a></h1>
+								<p>Created by Lits team </p>
+							</div>
+
+						<!-- Nav -->
+							<nav id="nav">
+								<ul>
+									<li class="current"><a href="index.html">Home</a></li>
+									
+									<li><a href="left-sidebar.html">Projects</a></li>
+									
+									<li><a href="no-sidebar.html">Information</a></li>
+								</ul>
+							</nav>
+							<div id="lggg" >
+
+						</div>
+						<div id="log">
+	
+					
+
+						 <span class="input input--manami" >
+								<input class="input__field input__field--manami" type="text" id="login" />
+								<label class="input__label input__label--manami" for="input-32">
+									<span class="input__label-content input__label-content--manami">login</span>
+								</label>
+							</span>
+							<br/>
+							<span class="input input--manami" id="in1">
+								<input class="input__field input__field--manami" type="text" id="pasword" />
+								<label class="input__label input__label--manami" for="input-33">
+									<span class="input__label-content input__label-content--manami">pass</span>
+					</label>
+				</span>
+						 <button onclick="login()" class="butreg"  >Log-in</button>
+						 <button onclick="pass()" class="butreg"></button>
+						 <br/>
+						<a  class="footer2" href="register.html">register</a>
+						</div>
+						<div id="lggg" >
+
+						</div>
+					</div>
+					
+				</div>
+				</div>
+
+			<!-- Main -->
+				<div class="wrapper style2">
+					<div class="title">Project List</div>
+					<div id="main" class="container">
+
+						<!-- Content -->
+							<div id="content">
+								<div id="list" >
+				<div class="listproj">
+          <ul id="myUL">
+            
+          </ul>
+				</div>
+				  <div id="myDIV" class="header">
+            <input type="text" id="myInput" placeholder="Title...">
+			<span onclick="newElement()" class="addBtn">Add</span>
+            
+          </div>
+			
+
+			</div>
+							</div>
+
+					</div>
+				</div>
+
+
+			<!-- Footer -->
+				<div id="footer-wrapper" class="wrapper">
+				
+					<div id="footer" class="container">
+				
+					</div>
+					<div id="copyright">
+						<ul>
+							<li>&copy; Untitled.</li><li>Design: <a href="http://html5up.net">HTML5 UP</a></li>
+						</ul>
+					</div>
+				</div>
+
+		</div>
+
+		<!-- Scripts -->
+
+			<script src="assets/js/jquery.min.js"></script>
+			<script src="assets/js/jquery.dropotron.min.js"></script>
+			<script src="assets/js/skel.min.js"></script>
+			<script src="assets/js/skel-viewport.min.js"></script>
+			<script src="assets/js/util.js"></script>
+			<!--[if lte IE 8]><script src="assets/js/ie/respond.min.js"></script><![endif]-->
+			<script src="assets/js/main.js"></script>
+			<script src="Scripts/login.js"></script>
+<script>
+var j,e;
+var ConnMask="conm_";
+
+			var element = document.getElementById("myInput");
+
+				
+              // Create a "close" button and append it to each list item
+              var myNodelist = document.getElementsByClassName("abc")
+
+              var i;
+              for (i = 0; i < myNodelist.length; i++) {
+                var span = document.createElement("SPAN");
+                var txt = document.createTextNode("\u00D7");
+                span.className = "close";
+                span.appendChild(txt);
+                myNodelist[i].appendChild(span);
+              }
+
+              // Click on a close button to hide the current list item
+              var close = document.getElementsByClassName("close");
+              var i;
+              for (i = 0; i < close.length; i++) {
+                close[i].onclick = function() {
+                  var div = this.parentElement;
+                  div.style.display = "none";
+                }
+              }
+
+              // Add a "checked" symbol when clicking on a list item
+              var list = document.querySelector('ul');
+              list.addEventListener('click', function(ev) {
+                if (ev.target.tagName === 'LI') {
+                  ev.target.classList.toggle('checked');
+                }
+              }, false);
+
+              // Create a new list item when clicking on the "Add" button
+             
+ function newElement() {
+                 e="";
+	
+
+	
+	for(i=0;i<1;i++){
+  var m = localStorage.getItem(ConnMask + i);
+	
+	
+	
+	
+
+	if(m!==null){
+		
+				
+				 j = myUL.children.length;
+				 
+				var o = document.getElementById("myInput").value;
+				localStorage.setItem(j, o);
+					
+				 var inputValue = localStorage.getItem(j);
+             
+				
+				
+                var t = document.createTextNode(inputValue);
+                
+
+                if (inputValue === '') {
+                  alert("You must write something!");
+                } else {
+				var a = document.createElement("A");
+                var li = document.createElement("li");
+                 var ul = document.getElementById("myUL");  
+
+
+                var a = document.createElement("a");
+                ul.appendChild(li);
+                a.appendChild(t);
+                li.setAttribute('class','abc');
+                li.setAttribute('data-itemid',j);
+                li.insertBefore(a,li.firstChild);
+
+                a.setAttribute('href','list.html');
+				
+                
+                document.getElementById("myInput").value = "";
+
+                var span = document.createElement("SPAN");
+                var txt = document.createTextNode("\u00D7");
+                span.className = "close";
+                span.appendChild(txt);
+                li.appendChild(span);
+					}
+					
+					
+					
+                
+              }else {
+			  document.getElementById("myInput").value = "";
+			  alert("Please sign in your account")
+			  }}}  
+			  var p = 0;
+			  
+			  
+			  //load function-----------------------------------------------------
+			  function load() {
+			  e="";
+	
+
+
+	for(i=0;i<1;i++){
+  var m = localStorage.getItem(ConnMask + i);
+	for(u=0;u<m.length;u++){
+	if(m[u]!=" "){
+	e = e + m[u];
+
+	
+	} else {
+		r = u+1;
+		u=m.length;
+	}
+	}
+	
+	
+	
+	//alert("log "+e);
+	if(e!=""){
+			  var a = document.createElement("A");
+                var li = document.createElement("li");
+			  var len = localStorage.length;
+				
+				 
+				
+				 var inputValue = localStorage.getItem(p);
+				if(inputValue !== null){
+			   var t = document.createTextNode(inputValue);
+                
+
+                 
+                 var ul = document.getElementById("myUL");  
+                var a = document.createElement("a");
+                ul.appendChild(li);
+                a.appendChild(t);
+                li.setAttribute('class','abc');
+                li.insertBefore(a,li.firstChild);
+
+                a.setAttribute('href','list.html');
+                
+              
+
+                var span = document.createElement("SPAN");
+                var txt = document.createTextNode("\u00D7");
+                span.className = "close";
+                span.appendChild(txt);
+                li.appendChild(span);
+				}
+				p++;
+				
+				if(p<10){
+				load()
+				}
+				}
+				
+			  
+			  
+			  
+			  
+			  
+			  
+			
+			  }}
+			  function load1() {
+			  localStorage.clear();
+			  }
+			  load()
+			  for (i = 0; i < close.length; i++) {
+                  close[i].onclick = function() {
+				  
+                    var div = this.parentElement;
+					
+					div.style.display = "none";
+					
+					localStorage.removeItem("0");
+                  
+				  
+				  }
+                }
+
+</script>
+<style>
+#lggg {
+position:absolute;
+top: 0px;
+left: 1200px;
+
+}
+#b2{
+	height: 20px;
+	
+}
+.butlogout {	
+width:10px;
+height:10px;
+background-color:red;
+
+}
+#in1{
+	position:relative;
+	top:-30px;
+}
+#log {
+position:absolute;
+left:1050px;
+top:0px;
+width:300px;
+heigth:100px;
+}
+#log .butreg{
+	position:relative;
+	left:25%;
+	top:-50px;
+}
+#log a{
+	position:relative;
+	left:39%;
+	top:-50px;
+}
+
+.footerp {
+padding-top:10px;
+}
+
+#list {
+background-color:#b3b3ff;
+box-shadow:
+   0 2px 20px rgba(0, 0, 0, .3),
+   -23px 0 20px -23px rgba(0, 0, 0, .8),
+   23px 0 20px -23px rgba(0, 0, 0, .8),
+0 0 40px rgba(0, 0, 0, .1) inset; 
+
+}
+
+
+/* Remove margins and padding from the list */
+.listproj {
+
+
+
+margin:auto;
+
+height:380px;
+
+
+overflow:auto;
+background-color:white;
+
+}
+.listproj ul {
+	
+  margin: 0;
+  padding: 0;
+  text-decoration:none;
+}
+
+/* Style the list items */
+.listproj ul li {
+  cursor: pointer;
+  position: relative;
+	text-decoration:none;
+  padding: 12px 8px 12px 40px;
+  background: #eee;
+  font-size: 18px;
+  
+  
+  
+  /* make the list items unselectable */
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+/* Set all odd list items to a different color (zebra-stripes) */
+.listproj ul li:nth-child(odd) {
+  background: #f9f9f9;
+}
+
+/* Darker background-color on hover */
+.listproj ul li:hover {
+  background: #ddd;
+}
+
+/* When clicked on, add a background color and strike out text */
+
+
+/* Add a "checked" mark when clicked on */
+
+
+.close {
+  position: absolute;
+  right: 0;
+  top: 0;
+  padding: 12px 16px 12px 16px
+}
+
+.close:hover {
+   background-image:url(images/pic10.jpg) ;
+  color: white;
+}
+
+/* Style the header */
+.header {
+  background-image:url(images/pic10.jpg) ;
+  padding: 20px 30px;
+  color: white;
+  text-align: center;
+}
+
+/* Clear floats after the header */
+.header:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* Style the input */
+input {
+  border: none;
+  width: 75%;
+  padding: 10px;
+  float: left;
+  font-size: 16px;
+}
+
+/* Style the "Add" button */
+.addBtn {
+  padding: 5px;
+  width: 25%;
+  background: #d9d9d9;
+  color: #555;
+  float: left;
+  text-align: center;
+  font-size: 25px;
+  cursor: pointer;
+}
+
+.addBtn:hover {
+  background-color: #bbb;
+}
+</style>
+	</body>
+</html>
