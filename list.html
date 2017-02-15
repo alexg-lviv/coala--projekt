@@ -63,7 +63,7 @@
 	<div id="tasks" > 
 	<ul>
 			
-			<li class="tasks"><a data-toggle="tooltip" data-placement="top" title="Hooray!">Task</a></li>
+			<li class="tasksT">Task</li>
 		
 	
 		
@@ -71,54 +71,38 @@
 			
 		
 			
-			<li class="tasks">Result</li>
+			<li class="taskes">Time</li>
 		
 			
-			<li class="tasks">DoneIt</li>
+			<li class="taskes">Real Time</li>
 		
 		
 		
-			<li class="tasks">Pohibka</li>
+			<li class="taskes">Fault</li>
 			
 		</ul>
 	</div>
 			<div id="hed" > 
-		<ul id="projects1" class="pr">
+		<ul id="projects1" class="prt">
 			
 		
 		</ul>
 		
-		<ul id="projects2"class="pr">
 		
-
 		
-		</ul>
-		
-		<ul id="projects3" class="pr">
-			
-
-		
-		</ul>
-		
-		<ul id="projects4" class="pr">
-			
-	
-			
-		</ul>
-		
-		<ul id="projects5" class="pr">
+		<ul id="projects5" class="pro">
 			
 		
 		
 		</ul>
 		
-		<ul id="projects6" class="pr">
+		<ul id="projects6" class="pro">
 			
 			
 		
 		</ul>
 		
-		<ul id="projects7" class="pr">
+		<ul id="projects7" class="pro">
 		
 			
 			
@@ -153,13 +137,13 @@
 		<div id="list" >
 		
 		 <div id="myDIV" class="header">
-		 <input type="textfield"  class="Task" value="" id="Task">
+		 <input type="textfield"  class="Task" value="" placeholder="Your Task..." id="Task">
 
-			<input type="textfield"  class="O" value="" id="O">
+			<input type="textfield"  class="O" value="" placeholder="Optimistic time..." id="O">
 
-			<input type="textfield"  class="S" value="" id="S">
+			<input type="textfield"  class="S" value="" placeholder="Realistic time..." id="S">
 		
-			<input type="textfield"  class="P" value="" id="P">
+			<input type="textfield"  class="P" value="" placeholder="Pesemistic time..." id="P">
             
 			<span onclick="cd()" class="addBtn">Add</span>
             
@@ -277,6 +261,7 @@ function cd() {
   var newLi = document.createElement('li');
   var a = document.createElement('a');
   a.setAttribute('data-toggle', 'tooltip');
+  a.setAttribute('class', 'tooltip');
   a.setAttribute('data-placement', 'top');
   a.setAttribute('title', ' '+c+' '+d+' '+b);
   a.innerHTML = u;
@@ -368,7 +353,7 @@ if(f.length>0){
   var a = document.createElement('a');
   a.setAttribute('data-toggle', 'tooltip');
   a.setAttribute('data-placement', 'top');
-  a.setAttribute('title', ' '+c+' '+d+' '+b);
+  a.setAttribute('title', '    '+c+'    '+d+'    '+b);
   a.innerHTML = u;
   newLi.appendChild(a);
   projects5.insertBefore(newLi, projects5.children[0]);
