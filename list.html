@@ -261,16 +261,21 @@ function cd() {
   var newLi = document.createElement('li');
   var input = document.createElement('input');
   var button = document.createElement('button');
-
+  var a = document.createElement('a');
+	 
   var ul = document.getElementById("projects6");
+  a.innerHTML="Save";
   ul.appendChild(newLi);
   newLi.appendChild(input);
   newLi.appendChild(button);
+  button.appendChild(a);
 
   input.setAttribute('id', 'sde');
   button.setAttribute('onClick', 'dc()');
     button.setAttribute('class', 'gf11');
+    button.setAttribute('id', 'gfg');
     button.setAttribute('value', 'add');
+	
   projects6.insertBefore(newLi, projects6.children[0]);
 
 
