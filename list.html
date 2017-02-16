@@ -11,6 +11,9 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1" />
 		<!--[if lte IE 8]><script src="assets/js/ie/html5shiv.js"></script><![endif]-->
 		<link rel="stylesheet" href="assets/css/main.css" />
+	
+	
+		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 			 <link href='scc.proj.css' rel='stylesheet' />
 
 		<!--[if lte IE 8]><link rel="stylesheet" href="assets/css/ie8.css" /><![endif]-->
@@ -60,7 +63,7 @@
 	<div id="tasks" > 
 	<ul>
 			
-			<li class="tasks">Task</li>
+			<li class="tasks"><a data-toggle="tooltip" data-placement="top" title="Hooray!">Task</a></li>
 		
 	
 		
@@ -272,15 +275,31 @@ function cd() {
   projects4.insertBefore(newLi, projects4.children[0]);
 
   y = document.getElementById("O").value;
-  x = document.getElementById("S").value;
+  x = document.getElementById("S").value;									
   n = document.getElementById("P").value;
   y = parseInt(y);
   x = parseInt(x);
   n = parseInt(n);
   u = ((x * 4) + y + n) / 6;
   u = Math.round(u);
+  
+  
+  
+              /*  var a = document.createElement("a");
+                ul.appendChild(li);
+                a.appendChild(t);
+                li.setAttribute('class','abc');
+                li.setAttribute('data-itemid',j);
+                li.insertBefore(a,li.firstChild);
+				*/
+  
   var newLi = document.createElement('li');
-  newLi.innerHTML = u;
+  var a = document.createElement('a');
+  a.setAttribute('data-toggle', 'tooltip');
+  a.setAttribute('data-placement', 'top');
+  a.setAttribute('title', ' '+c+' '+d+' '+b);
+  a.innerHTML = u;
+  newLi.appendChild(a);
   projects5.insertBefore(newLi, projects5.children[0]);
   //how much time you spend
   var newLi = document.createElement('li');
@@ -377,7 +396,12 @@ if(f.length>0){
   u = ((x * 4) + y + n) / 6;
   u = Math.round(u);
   var newLi = document.createElement('li');
-  newLi.innerHTML = u;
+  var a = document.createElement('a');
+  a.setAttribute('data-toggle', 'tooltip');
+  a.setAttribute('data-placement', 'top');
+  a.setAttribute('title', ' '+c+' '+d+' '+b);
+  a.innerHTML = u;
+  newLi.appendChild(a);
   projects5.insertBefore(newLi, projects5.children[0]);
 
 
@@ -484,6 +508,11 @@ shhj = Math.abs(shhj);
   newLi.innerHTML = dji;
   projects6.insertBefore(newLi, projects6.children[1]);
 }
+</script>
+<script>
+$(document).ready(function(){
+    $('[data-toggle="tooltip"]').tooltip();   
+});
 </script>
 	</body>
 </html>
