@@ -29,10 +29,9 @@ for(i=0;i<1;i++){
 		u=m.length;
 	}
 	}
-	alert("pass"+t);
-	alert("log "+e);
+	
 	if((q==e)&(w==t)){
-	alert("connected to "+ q);
+	
 	document.getElementById('log' ).style.display = 'none';
 	document.getElementById('lggg').innerHTML="User: "+q;
 	
@@ -73,7 +72,7 @@ function load() {
 	
 	
 	
-	//alert("log "+e);
+	
 	if(e!=""){
 	
 	document.getElementById('log' ).style.display = 'none';
