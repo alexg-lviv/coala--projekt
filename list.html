@@ -379,21 +379,21 @@ if(f.length>0){
   shhj = localStorage.getItem(DMAsk + e);
   var newLi = document.createElement('li');
   newLi.innerHTML = shhj;
-  projects7.insertBefore(newLi, projects7.children[1]);
+  projects7.replaceChild(newLi, projects7.children[0]);
 
   dji = localStorage.getItem(HMAsk + e);
   var newLi = document.createElement('li');
   newLi.innerHTML = dji;
-  projects6.insertBefore(newLi, projects6.children[1]);
+  projects6.replaceChild(newLi, projects6.children[0]);
 	
  
 for (i = 0; i < 5; i++) {
     if (typeof(projects6.children[0]) !== "undefined") {
-      projects6.children[0] = this.parentElement;
-      projects6.children[0].style.display = "none";
+     // projects6.children[0] = this.parentElement;
+     // projects6.children[0].style.display = "none";
 
-      projects7.children[0] = this.parentElement;
-      projects7.children[0].style.display = "none";
+      //projects7.children[0] = this.parentElement;
+      //projects7.children[0].style.display = "none";
     }
   }
 
@@ -438,24 +438,24 @@ shhj = Math.abs(shhj);
 
   for (i = 0; i < 5; i++) {
     if (typeof(projects6.children[i]) != "undefined") {
-      projects6.children[0] = this.parentElement;
-      projects6.children[0].style.display = "none";
+     // projects6.children[0] = this.parentElement;
+     // projects6.children[0].style.display = "none";
 
-      projects7.children[0] = this.parentElement;
-      projects7.children[0].style.display = "none";
+      //projects7.children[0] = this.parentElement;
+     // projects7.children[0].style.display = "none";
     }
   }
   localStorage.setItem(DMAsk + k, shhj);
   shhj = localStorage.getItem(DMAsk + k);
   var newLi = document.createElement('li');
   newLi.innerHTML = shhj;
-  projects7.insertBefore(newLi, projects7.children[1]);
+  projects7.replaceChild(newLi, projects7.children[0]);
 
   localStorage.setItem(HMAsk + k, dji);
   dji = localStorage.getItem(HMAsk + k);
   var newLi = document.createElement('li');
   newLi.innerHTML = dji;
-  projects6.insertBefore(newLi, projects6.children[1]);
+  projects6.replaceChild(newLi, projects6.children[0]);
 }
 </script>
 <script>
