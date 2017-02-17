@@ -378,6 +378,15 @@ if(f.length>0){
 
   shhj = localStorage.getItem(DMAsk + e);
   var newLi = document.createElement('li');
+  if(shhj<3){
+  newLi.setAttribute('class','good');
+  }
+  if((shhj>2)&(shhj<6)){
+  newLi.setAttribute('class','soso');
+  }
+  if(shhj>5){
+  newLi.setAttribute('class','bad');
+  }
   newLi.innerHTML = shhj;
   projects7.replaceChild(newLi, projects7.children[0]);
 
@@ -448,6 +457,15 @@ shhj = Math.abs(shhj);
   localStorage.setItem(DMAsk + k, shhj);
   shhj = localStorage.getItem(DMAsk + k);
   var newLi = document.createElement('li');
+  if(shhj<3){
+  newLi.setAttribute('class','good');
+  }
+  if((shhj>2)&(shhj<6)){
+  newLi.setAttribute('class','soso');
+  }
+  if(shhj>5){
+  newLi.setAttribute('class','bad');
+  }
   newLi.innerHTML = shhj;
   projects7.replaceChild(newLi, projects7.children[0]);
 
